@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kalkulator.HistoryPage"
+             Title="HistoryPage"
+             BackgroundColor="#2c2c54">
+    <CollectionView x:Name="historyList" Grid.Column="1" SelectionMode="Single" SelectionChanged="historyList_SelectionChanged" >
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding Equasion}" TextColor="#f7f1e3" Background="#40407a" Margin="5" FontSize="16" Padding="5"/>
+                    <Label Grid.Column="1" Text="=" TextColor="#f7f1e3" Background="#40407a" Margin="5" FontSize="16" Padding="5"/>
+                    <Label Grid.Column="2" Text="{Binding Result}" TextColor="#f7f1e3" Background="#40407a" Margin="5" FontSize="16" Padding="5"/>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

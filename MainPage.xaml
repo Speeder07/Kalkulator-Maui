@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kalkulator.MainPage"
+             BackgroundColor="#2c2c54">
+
+
+    <Grid RowDefinitions="*,2*">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="result" Text="" TextColor="#f7f1e3" FontSize="50" Margin="5"/>
+            <Button Text="History" Grid.Column="1" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30" Clicked="OnHistory"/>
+        </Grid>
+        
+
+        <Grid Grid.Row="1" x:Name="KeyPad">
+            <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*">
+                <Button Grid.Row="3" Grid.Column="1" x:Name="Btn_0" Clicked="Click_0" Text="0" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30" />
+                <Button Grid.Row="0" Grid.Column="0" x:Name="Btn_1" Clicked="Click_1" Text="1" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="Btn_2" Clicked="Click_2" Text="2" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="Btn_3" Clicked="Click_3" Text="3" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="1" Grid.Column="0" x:Name="Btn_4" Clicked="Click_4" Text="4" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="Btn_5" Clicked="Click_5" Text="5" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="1" Grid.Column="2" x:Name="Btn_6" Clicked="Click_6" Text="6" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="2" Grid.Column="0" x:Name="Btn_7" Clicked="Click_7" Text="7" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="2" Grid.Column="1" x:Name="Btn_8" Clicked="Click_8" Text="8" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+                <Button Grid.Row="2" Grid.Column="2" x:Name="Btn_9" Clicked="Click_9" Text="9" Background="#40407a" Margin="5" TextColor="#f7f1e3" FontSize="30"/>
+
+                <Button Grid.Row="0" Grid.Column="3" x:Name="Btn_Add" Clicked="Click_Add" Text="+" Background="#40407a" Margin="5" TextColor="#ffb142" FontSize="30"/>
+                <Button Grid.Row="1" Grid.Column="3" x:Name="Btn_Sub" Clicked="Click_Sub" Text="-" Background="#40407a" Margin="5" TextColor="#ffb142" FontSize="30"/>
+                <Button Grid.Row="2" Grid.Column="3" x:Name="Btn_Mlt" Clicked="Click_Mlt" Text="*" Background="#40407a" Margin="5" TextColor="#ffb142" FontSize="30"/>
+                <Button Grid.Row="3" Grid.Column="3" x:Name="Btn_Div" Clicked="Click_Div" Text="/" Background="#40407a" Margin="5" TextColor="#ffb142" FontSize="30"/>
+
+                <Button Grid.Row="3" Grid.Column="2" x:Name="Btn_Eqls" Clicked="Click_Eqls" Text="=" Background="#40407a" Margin="5" TextColor="#ff793f" FontSize="30"/>
+                <Button Grid.Row="4" Grid.Column="0" x:Name="Btn_Back" Clicked="Click_Back" Text="&lt;" Background="#40407a" Margin="5" TextColor="#ff5252" FontSize="30"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
